@@ -76,7 +76,7 @@ python app.py
 
 #### 4. View Results
 
-* Output is saved to `final_output.json`.
+* Output is saved to `output.json`.
 * Shows the most relevant sections (with titles, documents, page numbers, ranking, and full refined text).
 
 ---
