@@ -32,13 +32,23 @@ This project enables extraction of the most relevant content from PDF files, tai
 
 ### Option 1: Run via Docker (Recommended)
 
-> If using **Windows Powershell**:
+Use the following command to build the Docker image:
 
 ```bash
-docker run --rm -it -v "${PWD}:/app" pdf-parser-app
-````
+docker build --platform linux/amd64 -t mysolutionname:somerandomidentifier .
+```
 
-Make sure you've built the image first (see Docker section below).
+#### Docker Run
+
+Use the following command to run the Docker container:
+
+```bash
+docker run --rm \
+  -v "${PWD}/input:/app/input" \
+  -v "${PWD}/output:/app/output" \
+  --network none \
+  mysolutionname:somerandomidentifier
+```
 
 ---
 
@@ -76,7 +86,7 @@ python app.py
 
 #### 4. View Results
 
-* Output is saved to `final_output.json`.
+* Output is saved to `output.json`.
 * Shows the most relevant sections (with titles, documents, page numbers, ranking, and full refined text).
 
 ---
