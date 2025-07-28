@@ -254,8 +254,6 @@ def create_dynamic_keyword_lists(filters, model=None, all_texts=None):
             semantic_exclusions = get_semantic_exclusions(req)
             # Be more conservative with semantic matches to avoid noise
             dynamic_excludes.update(semantic_exclusions[:3])
-        
-        #print(f"Exclusions for '{req}': {list(pattern_exclusions)} + semantic terms")
     
     # Process explicit exclusions
     for exclude_term in filters.get('exclude', []):
@@ -327,7 +325,7 @@ def check_constraints(text, filters, model=None, all_texts=None):
     
     return True
 filters = parse_generic_query(query)
-print(f"Parsed filters: {filters}")
+# print(f"Parsed filters: {filters}")
 
 top_sections = []
 top_texts = []
@@ -335,8 +333,6 @@ for sec, txt in zip(top_sections_raw, top_texts_raw):
     if check_constraints(txt, filters, model, texts):
         top_sections.append(sec)
         top_texts.append(txt)
-    else:
-        print(f"FILTERED OUT: {txt[:100]}...")
 
 print(f"After filtering: {len(top_sections)} sections remain out of {len(top_sections_raw)}")
 
@@ -362,7 +358,6 @@ if not top_sections:
         print("Sample texts being filtered:")
         for i, txt in enumerate(top_texts_raw[:3]):
             print(f"Text {i+1}: {txt[:100]}...")
-        # Don't fall back to non-matching content - keep empty list
 
 # Step 4B: Rerank using Cross-Encoder
 if not top_sections:
@@ -407,12 +402,12 @@ for idx, sec in enumerate(reranked_sections[:top_k]):
         "document": sec["document"],
         "section_title": sec["section_title"],
         "importance_rank": idx + 1,
-        "page_number": sec["page_number"]
+        "page_number": sec["page_number"]+1
     })
     output["subsection_analysis"].append({
         "document": sec["document"],
         "refined_text": sec["text"],
-        "page_number": sec["page_number"]
+        "page_number": sec["page_number"]+1
     })
 
 # ---- STEP 6: Save Output ----

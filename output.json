@@ -1,75 +1,77 @@
 {
     "metadata": {
         "input_documents": [
-            "South of France - Cities.pdf",
-            "South of France - Cuisine.pdf",
-            "South of France - History.pdf",
-            "South of France - Restaurants and Hotels.pdf",
-            "South of France - Things to Do.pdf",
-            "South of France - Tips and Tricks.pdf",
-            "South of France - Traditions and Culture.pdf"
+            "Breakfast Ideas.pdf",
+            "Dinner Ideas - Mains_1.pdf",
+            "Dinner Ideas - Mains_2.pdf",
+            "Dinner Ideas - Mains_3.pdf",
+            "Dinner Ideas - Sides_1.pdf",
+            "Dinner Ideas - Sides_2.pdf",
+            "Dinner Ideas - Sides_3.pdf",
+            "Dinner Ideas - Sides_4.pdf",
+            "Lunch Ideas.pdf"
         ],
-        "persona": "Travel Planner",
-        "job_to_be_done": "Plan a trip of 4 days for a group of 10 college friends.",
-        "processing_timestamp": "2025-07-28T19:54:34.535365"
+        "persona": "Food Contractor",
+        "job_to_be_done": "Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+        "processing_timestamp": "2025-07-28T21:39:56.478196"
     },
     "extracted_sections": [
         {
-            "document": "South of France - Tips and Tricks.pdf",
-            "section_title": "Introduction",
+            "document": "Dinner Ideas - Sides_1.pdf",
+            "section_title": "Instructions",
             "importance_rank": 1,
-            "page_number": 0
-        },
-        {
-            "document": "South of France - Tips and Tricks.pdf",
-            "section_title": "Conclusion",
-            "importance_rank": 2,
-            "page_number": 8
-        },
-        {
-            "document": "South of France - Things to Do.pdf",
-            "section_title": "Dordogne River",
-            "importance_rank": 3,
             "page_number": 3
         },
         {
-            "document": "South of France - Cities.pdf",
-            "section_title": "Language",
-            "importance_rank": 4,
-            "page_number": 1
+            "document": "Dinner Ideas - Sides_1.pdf",
+            "section_title": "Ingredients",
+            "importance_rank": 2,
+            "page_number": 5
         },
         {
-            "document": "South of France - Things to Do.pdf",
-            "section_title": "Introduction",
+            "document": "Dinner Ideas - Sides_1.pdf",
+            "section_title": "Instructions",
+            "importance_rank": 3,
+            "page_number": 5
+        },
+        {
+            "document": "Dinner Ideas - Sides_1.pdf",
+            "section_title": "Instructions",
+            "importance_rank": 4,
+            "page_number": 12
+        },
+        {
+            "document": "Dinner Ideas - Sides_2.pdf",
+            "section_title": "Instructions",
             "importance_rank": 5,
-            "page_number": 0
+            "page_number": 14
         }
     ],
     "subsection_analysis": [
         {
-            "document": "South of France - Tips and Tricks.pdf",
-            "refined_text": "Planning a trip to the South of France requires thoughtful preparation to ensure a comfortable and enjoyable experience. This guide covers everything from packing essentials to travel tips, catering to all seasons and various activities. Whether you're traveling solo, with kids, or in a group, this guide will help you make the most of your trip. General Packing Tips and Tricks Layering: The weather can vary, so pack layers to stay comfortable in diﬀerent • temperatures. Versatile Clothing: Choose items that can be mixed and matched to create multiple • outfits, helping you pack lighter. Packing Cubes: Use packing cubes to organize your clothes and maximize suitcase • space. Roll Your Clothes: Rolling clothes saves space and reduces wrinkles. • Travel-Sized Toiletries: Bring travel-sized toiletries to save space and comply with • airline regulations. Reusable Bags: Pack a few reusable bags for laundry, shoes, or shopping. • First Aid Kit: Include a small first aid kit with band-aids, antiseptic wipes, and any • necessary medications. Copies of Important Documents: Make copies of your passport, travel insurance, and • other important documents. Keep them separate from the originals. Portable Laundry Kit: A small laundry kit with detergent and a travel clothesline can • be handy for longer trips. Multi-Purpose Shoes: Choose shoes that are comfortable for walking but can also be • worn to a nice dinner. Travel Pillow and Blanket: A compact travel pillow and blanket can make long flights • or train rides more comfortable. Ziplock Bags: Use ziplock bags for liquids, snacks, or to keep items organized and • protected from spills. Emergency Contact List: Have a list of emergency contacts, including local embassy • or consulate information.",
-            "page_number": 0
-        },
-        {
-            "document": "South of France - Tips and Tricks.pdf",
-            "refined_text": "Packing for a trip to the South of France involves considering the season, planned activities, and the needs of both adults and children. By following this comprehensive guide and incorporating the tips and tricks provided, you'll be well-prepared for a comfortable and enjoyable trip. Remember to pack light, versatile clothing, and essential items to make the most of your travel experience. Bon voyage!",
-            "page_number": 8
-        },
-        {
-            "document": "South of France - Things to Do.pdf",
-            "refined_text": "charming villages.",
+            "document": "Dinner Ideas - Sides_1.pdf",
+            "refined_text": "Arrange meats, cheeses, olives, and vegetables on a platter. o Serve with breadsticks. o",
             "page_number": 3
         },
         {
-            "document": "South of France - Cities.pdf",
-            "refined_text": "areas. Learning a few basic French phrases can enhance your travel experience.",
-            "page_number": 1
+            "document": "Dinner Ideas - Sides_1.pdf",
+            "refined_text": "Assorted small side dishes like pickled radish, spinach, bean sprouts, kimchi o ",
+            "page_number": 5
         },
         {
-            "document": "South of France - Things to Do.pdf",
-            "refined_text": "The South of France, with its stunning coastline, picturesque villages, and vibrant cities, oﬀers a wealth of activities and experiences for travelers. Whether you're seeking adventure, relaxation, or cultural enrichment, this region has something for everyone. This guide will take you through a variety of activities and must-see attractions to help you plan an unforgettable trip.",
-            "page_number": 0
+            "document": "Dinner Ideas - Sides_1.pdf",
+            "refined_text": "Prepare each side dish separately. o Arrange on small plates. o Serve as accompaniments to the main meal. o",
+            "page_number": 5
+        },
+        {
+            "document": "Dinner Ideas - Sides_1.pdf",
+            "refined_text": "Grate carrots and mix with raisins and chopped parsley. o Whisk lemon juice, olive oil, cumin, and salt, then pour over salad. o Toss well and serve chilled. o",
+            "page_number": 12
+        },
+        {
+            "document": "Dinner Ideas - Sides_2.pdf",
+            "refined_text": "Dice tomatoes and cucumber, slice red onion. o Mix vegetables with olives and crumbled feta cheese. o Whisk olive oil, vinegar, oregano, and salt, then pour over salad. o Toss well and serve. o",
+            "page_number": 14
         }
     ]
 }

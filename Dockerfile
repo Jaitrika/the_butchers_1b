@@ -4,13 +4,17 @@ FROM python:3.11-slim
 # Set the working directory
 WORKDIR /app
 
-# Install system dependencies needed for PyMuPDF and ML libraries
+# Install system dependencies needed for PyMuPDF, ML libraries, and timezone
 RUN apt-get update && apt-get install -y \
     gcc \
     g++ \
     libffi-dev \
     libssl-dev \
+    tzdata \
     && rm -rf /var/lib/apt/lists/*
+
+# Set timezone explicitly (this affects datetime.now())
+ENV TZ=Asia/Kolkata
 
 # Copy requirements file first (helps with Docker layer caching)
 COPY requirements.txt .

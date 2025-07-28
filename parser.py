@@ -423,7 +423,7 @@ def main():
     for i, section in enumerate(sections_list, 1):
         print(f"Section {i}:")
         print(f"Document: {section['document']}")
-        print(f"Page: {section['page'] + 1}")  # Convert to 1-based page numbering
+        print(f"Page: {section['page']+1}")  # 1-based page numbering
         print(f"Title: {section['section_title']}")
         
         # Show text preview
