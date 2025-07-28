@@ -416,7 +416,7 @@ for idx, sec in enumerate(reranked_sections[:top_k]):
     })
 
 # ---- STEP 6: Save Output ----
-with open("final_output.json", "w", encoding="utf-8") as f:
+with open("output.json", "w", encoding="utf-8") as f:
     json.dump(output, f, indent=4, ensure_ascii=False)
 
 print(" Output saved")

@@ -1,4 +1,4 @@
-import fitz  # PyMuPDF
+import fitz 
 import re
 from collections import Counter
 from typing import List, Dict, Tuple
