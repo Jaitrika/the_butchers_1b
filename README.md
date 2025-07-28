@@ -32,15 +32,11 @@ This project enables extraction of the most relevant content from PDF files, tai
 
 ### Option 1: Run via Docker (Recommended)
 
+> If using **Windows Powershell**:
+
 ```bash
 docker run --rm -it -v "${PWD}:/app" pdf-parser-app
 ````
-
-> If using **Windows CMD**:
-
-```cmd
-docker run --rm -it -v "%cd%:/app" pdf-parser-app
-```
 
 Make sure you've built the image first (see Docker section below).
 
@@ -101,7 +97,7 @@ This sets up the container environment with all dependencies.
 
 ###  2. Run the App in a Container
 
-#### 🔹 For PowerShell or Unix-like shells:
+#### For PowerShell or Unix-like shells:
 
 ```bash
 docker run --rm -it -v "${PWD}:/app" pdf-parser-app
@@ -113,12 +109,7 @@ This mounts your current folder (containing `input.json`, `documents/`, etc.) in
 
 ### Output Location
 
-* The output file `final_output.json` will be saved to your host directory.
-* If you use a separate output folder, you can mount it explicitly:
-
-```bash
-docker run --rm -it -v "${PWD}:/app" -v "${PWD}/output:/app/output" pdf-parser-app
-```
+* The output file `output.json` will be saved to your host directory.
 
 ## How It Works
 
@@ -137,7 +128,7 @@ docker run --rm -it -v "${PWD}:/app" -v "${PWD}/output:/app/output" pdf-parser-a
 * Parses query for constraints like `"no sugar"`, `"gluten-free"`, etc.
 * Applies inclusion/exclusion filters on matched sections.
 * Re-ranks final candidates using a cross-encoder for precision.
-* Saves the top results to `final_output.json`.
+* Saves the top results to `output.json`.
 
 ---
 
@@ -148,9 +139,3 @@ docker run --rm -it -v "${PWD}:/app" -v "${PWD}/output:/app/output" pdf-parser-a
 * You can enhance the filtering logic to support complex custom constraints.
 
 ---
-
-## Troubleshooting
-
-* **Empty results?** Relax the query wording or increase `cosine_top_k`.
-* **Slow execution?** Ensure GPU-enabled torch is installed or reduce the number of candidate sections.
-* **Docker mount errors?** Use the correct path syntax based on your shell (see Docker Usage section above).
