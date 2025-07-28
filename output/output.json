@@ -13,18 +13,18 @@
         ],
         "persona": "Food Contractor",
         "job_to_be_done": "Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
-        "processing_timestamp": "2025-07-28T21:39:56.478196"
+        "processing_timestamp": "2025-07-28T23:51:46.259779"
     },
     "extracted_sections": [
         {
             "document": "Dinner Ideas - Sides_1.pdf",
-            "section_title": "Instructions",
+            "section_title": "Ingredients",
             "importance_rank": 1,
-            "page_number": 3
+            "page_number": 5
         },
         {
             "document": "Dinner Ideas - Sides_1.pdf",
-            "section_title": "Ingredients",
+            "section_title": "Instructions",
             "importance_rank": 2,
             "page_number": 5
         },
@@ -32,27 +32,22 @@
             "document": "Dinner Ideas - Sides_1.pdf",
             "section_title": "Instructions",
             "importance_rank": 3,
-            "page_number": 5
-        },
-        {
-            "document": "Dinner Ideas - Sides_1.pdf",
-            "section_title": "Instructions",
-            "importance_rank": 4,
             "page_number": 12
         },
         {
-            "document": "Dinner Ideas - Sides_2.pdf",
+            "document": "Dinner Ideas - Sides_4.pdf",
+            "section_title": "Instructions",
+            "importance_rank": 4,
+            "page_number": 2
+        },
+        {
+            "document": "Dinner Ideas - Sides_1.pdf",
             "section_title": "Instructions",
             "importance_rank": 5,
-            "page_number": 14
+            "page_number": 12
         }
     ],
     "subsection_analysis": [
-        {
-            "document": "Dinner Ideas - Sides_1.pdf",
-            "refined_text": "Arrange meats, cheeses, olives, and vegetables on a platter. o Serve with breadsticks. o",
-            "page_number": 3
-        },
         {
             "document": "Dinner Ideas - Sides_1.pdf",
             "refined_text": "Assorted small side dishes like pickled radish, spinach, bean sprouts, kimchi o ",
@@ -69,9 +64,14 @@
             "page_number": 12
         },
         {
-            "document": "Dinner Ideas - Sides_2.pdf",
-            "refined_text": "Dice tomatoes and cucumber, slice red onion. o Mix vegetables with olives and crumbled feta cheese. o Whisk olive oil, vinegar, oregano, and salt, then pour over salad. o Toss well and serve. o",
-            "page_number": 14
+            "document": "Dinner Ideas - Sides_4.pdf",
+            "refined_text": "Toast bread cubes until golden. o Dice tomatoes and cucumber, slice red onion. o Mix bread, tomatoes, cucumber, onion, and chopped basil. o Whisk olive oil, vinegar, and salt, then pour over salad. o Toss well and serve. o",
+            "page_number": 2
+        },
+        {
+            "document": "Dinner Ideas - Sides_1.pdf",
+            "refined_text": "Slice tomatoes and mozzarella. o Arrange on a plate, alternating slices. o Sprinkle with chopped basil, olive oil, balsamic glaze, and salt. o Serve immediately. o",
+            "page_number": 12
         }
     ]
 }

@@ -25,7 +25,7 @@ def extract_from_multiple_pdfs(folder_path, filenames):
 
     return all_sections
 
-with open("input.json", "r", encoding="utf-8") as f:
+with open("input/input.json", "r", encoding="utf-8") as f:
     input_data = json.load(f)
 
 documents_info = input_data["documents"]
@@ -46,7 +46,7 @@ print("Number of non-empty sections:", len(texts))
 
 # ---- STEP 3: Sentence Embeddings ----
 
-model = SentenceTransformer('all-MiniLM-L6-v2')
+model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2",cache_folder="/root/.cache",local_files_only=True)
 query_embedding = model.encode(query, convert_to_tensor=True)
 section_embeddings = model.encode(texts, convert_to_tensor=True)
 cosine_scores = util.cos_sim(query_embedding, section_embeddings)[0]
@@ -364,7 +364,7 @@ if not top_sections:
     print("No sections found after filtering - skipping cross-encoder step")
     reranked_sections = []
 else:
-    cross_model = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
+    cross_model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2",local_files_only=True,cache_folder="/root/.cache")
     cross_input = [(query, txt) for txt in top_texts]
     cross_scores = cross_model.predict(cross_input)
 
@@ -411,7 +411,7 @@ for idx, sec in enumerate(reranked_sections[:top_k]):
     })
 
 # ---- STEP 6: Save Output ----
-with open("output.json", "w", encoding="utf-8") as f:
+with open("output/output.json", "w", encoding="utf-8") as f:
     json.dump(output, f, indent=4, ensure_ascii=False)
 
 print(" Output saved")

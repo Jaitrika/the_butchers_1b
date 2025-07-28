@@ -22,10 +22,16 @@ COPY requirements.txt .
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+# 🔽 Pre-download embedding and cross-encoder models into container cache
+RUN python -c "\
+from sentence_transformers import SentenceTransformer, CrossEncoder; \
+SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2', cache_folder='/root/.cache'); \
+CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2', cache_folder='/root/.cache')"
+
 # Copy the application files
 COPY app.py .
 COPY parser.py .
-COPY input.json .
+COPY /input/input.json .
 
 # Copy the documents folder
 COPY documents/ ./documents/
