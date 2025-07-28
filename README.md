@@ -43,11 +43,13 @@ docker build --platform linux/amd64 -t mysolutionname:somerandomidentifier .
 Use the following command to run the Docker container:
 
 ```bash
-docker run --rm \
-  -v "${PWD}/input:/app/input" \
-  -v "${PWD}/output:/app/output" \
-  --network none \
+docker run --rm `
+  -v "${PWD}\input:/app/input" `
+  -v "${PWD}\output:/app/output" `
+  --network none `
   mysolutionname:somerandomidentifier
+
+
 ```
 
 ---
